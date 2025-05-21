@@ -1,7 +1,6 @@
 import ProductModel from "../models/Product.js";
-import mongoose from "mongoose";
 
-export const getProducts = async function (req, res) {
+export const createProduct = async function (req, res) {
   const product = req.body;
   console.log(product);
 
@@ -25,7 +24,7 @@ export const getProducts = async function (req, res) {
   }
 };
 
-export const createProduct = async function (req, res) {
+export const getProducts = async function (req, res) {
   try {
     const allProducts = await ProductModel.find();
     console.log(allProducts);
